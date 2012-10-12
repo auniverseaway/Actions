@@ -42,8 +42,9 @@ $cakeDescription = __d('cake_dev', 'Actions');
 <body>
 	<div id="container">
 		<div id="header">
-			<h1 id="actions-header"><?php echo $this->Html->link('Actions', '/'); ?></h1>
-			<h1 id="projects-header"><?php echo $this->Html->link('Projects', '/Projects'); ?></h1>
+			<h1 id="tags"><?php echo $this->Html->link('Tags', '/Tags'); ?></h1>
+			<h1 id="projects"><?php echo $this->Html->link('Projects', '/Projects'); ?></h1>
+			<h1 id="actions"><?php echo $this->Html->link('Actions', '/'); ?></h1>
 		</div>
 		<div id="content">
 			<?php echo $this->Session->flash(); ?>

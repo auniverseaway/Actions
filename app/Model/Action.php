@@ -1,5 +1,6 @@
 <?php
 class Action extends AppModel {
+    var $name = 'Action';
 	public $belongsTo = array(
         'Project' => array(
             'className'    => 'Project',

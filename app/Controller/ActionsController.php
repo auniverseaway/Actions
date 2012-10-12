@@ -13,8 +13,9 @@ class ActionsController extends AppController {
     }
 
     public function add() {
-        if ($this->request->is('post')) {
-            $this->Action->create();
+    	if ($this->request->is('post')) {
+        	$this->Action->create();
+
             if ($this->Action->save($this->request->data)) {
                 $this->Session->setFlash('Your action has been saved.');
                 $this->redirect(array('action' => 'index'));

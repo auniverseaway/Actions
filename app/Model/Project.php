@@ -1,17 +1,17 @@
 <?php
 class Project extends AppModel {
-	public $hasMany = array(
+    var $name = 'Project';
+    var $hasMany = array(
         'Action' => array(
-            'foreignKey'    => 'project_id',
-            // 'conditions'    => array('Comment.status' => '1'),
-            // 'order'         => 'Comment.created DESC',
-            // 'limit'         => '5',
-            'dependent'     => true
+            'className' => 'Action',
+            'foreignKey' => 'project_id',
         )
     );
-	public $validate = array(
+
+    public $validate = array(
         'name' => array(
             'rule' => 'notEmpty'
         )
     );
+
 }
