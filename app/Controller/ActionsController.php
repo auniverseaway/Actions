@@ -13,6 +13,7 @@ class ActionsController extends AppController {
     }
 
     public function add() {
+    	$this->set('projects', $this->Action->Project->find('list')); 
     	if ($this->request->is('post')) {
         	$this->Action->create();
 
