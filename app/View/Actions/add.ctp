@@ -5,6 +5,7 @@
 echo $this->Form->create('Action');
 echo $this->Form->input('title');
 echo $this->Form->input('project_id', array('empty' => 'Inbox'));
+echo $this->Form->date('duedate');
 echo $this->Form->input('body', array('rows' => '3'));
 echo $this->Form->input('status');
 echo $this->Form->end('Save Action');

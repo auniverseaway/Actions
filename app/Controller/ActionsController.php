@@ -3,8 +3,8 @@ class ActionsController extends AppController {
     public $helpers = array('Html', 'Form', 'Session');
     public $components = array('Session');
 
-    public function index() {
-        $this->set('actions', $this->Action->find('all', array('conditions' => array('status' => 0))));
+    public function inbox() {
+        $this->set('actions', $this->Action->find( 'all', array( 'conditions' => array("project_id" => null, "status" => "0"))));
     }
 
     public function view($id = null) {
@@ -19,7 +19,7 @@ class ActionsController extends AppController {
 
             if ($this->Action->save($this->request->data)) {
                 $this->Session->setFlash('Your action has been saved.');
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'inbox'));
             } else {
                 $this->Session->setFlash('Unable to add your action.');
             }
@@ -35,7 +35,7 @@ class ActionsController extends AppController {
 	    } else {
 	        if ($this->Action->save($this->request->data)) {
 	            $this->Session->setFlash('Your action has been updated.');
-	            $this->redirect(array('action' => 'index'));
+	            $this->redirect(array('action' => 'inbox'));
 	        } else {
 	            $this->Session->setFlash('Unable to update your action.');
 	        }
@@ -48,7 +48,7 @@ class ActionsController extends AppController {
 	    }
 	    if ($this->Action->delete($id)) {
 	        $this->Session->setFlash('The Action with id ' . $id . ' has been deleted.');
-	        $this->redirect(array('action' => 'index'));
+	        $this->redirect(array('action' => 'inbox'));
 	    }
 	}
 
