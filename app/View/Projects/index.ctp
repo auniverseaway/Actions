@@ -1,3 +1,4 @@
+<h1 class="view-name">All Projects</h1>
 <?php foreach ($projects as $project): ?>
     <div class="action">
     	<?php echo $this->Html->link($project['Project']['name'], 

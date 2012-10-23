@@ -1,9 +1,30 @@
 #header h1 a {
 	display: block;
-	color: #FFF;
+	color: #4c4c4c;
 	text-decoration: none;
-	height: 55px;
+	height: 40px;
 	padding: 0px 15px;
+	font-family: 'OpenSansLight', 'lucida grande',verdana,helvetica,arial,sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 40px;
+	font-style: normal;
+}
+
+.view-name {
+	padding: 5px 0px 5px 10px;
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	background: #eeeeee;
+	border-bottom: 1px solid #b8c2c7;
+background: -moz-linear-gradient(top,  #eeeeee 0%, #dddddd 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#dddddd));
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#dddddd 100%);
+background: -o-linear-gradient(top,  #eeeeee 0%,#dddddd 100%);
+background: -ms-linear-gradient(top,  #eeeeee 0%,#dddddd 100%);
+background: linear-gradient(to bottom,  #eeeeee 0%,#dddddd 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 );
+
 }
 
 .action a {
@@ -11,14 +32,9 @@
 	padding: 10px;
 	text-decoration: none;
 	color: #333;
-	background: #f9f9f9; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f9f9f9 0%, #e0e0e0 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#e0e0e0)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f9f9f9 0%,#e0e0e0 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f9f9f9 0%,#e0e0e0 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f9f9f9 0%,#e0e0e0 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #f9f9f9 0%,#e0e0e0 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+	background: #e9f6fb;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #b8c2c7;
 }
 
 .action a:hover {
@@ -35,23 +51,19 @@
 }
 
 #header {
-	background: #6482aa; /* Old browsers */
-background: -moz-linear-gradient(top,  #6482aa 0%, #61799f 10%, #5c6b8a 25%, #5b6c8f 37%, #5a6c94 50%, #51607f 51%, #5d7e9f 83%, #6596ad 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6482aa), color-stop(10%,#61799f), color-stop(25%,#5c6b8a), color-stop(37%,#5b6c8f), color-stop(50%,#5a6c94), color-stop(51%,#51607f), color-stop(83%,#5d7e9f), color-stop(100%,#6596ad)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #6482aa 0%,#61799f 10%,#5c6b8a 25%,#5b6c8f 37%,#5a6c94 50%,#51607f 51%,#5d7e9f 83%,#6596ad 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #6482aa 0%,#61799f 10%,#5c6b8a 25%,#5b6c8f 37%,#5a6c94 50%,#51607f 51%,#5d7e9f 83%,#6596ad 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #6482aa 0%,#61799f 10%,#5c6b8a 25%,#5b6c8f 37%,#5a6c94 50%,#51607f 51%,#5d7e9f 83%,#6596ad 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #6482aa 0%,#61799f 10%,#5c6b8a 25%,#5b6c8f 37%,#5a6c94 50%,#51607f 51%,#5d7e9f 83%,#6596ad 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6482aa', endColorstr='#6596ad',GradientType=0 ); /* IE6-9 */
-	height: 55px;
+	background: #c2d4cf;
+	height: 40px;
 	padding-right: 15px;
+	border-bottom: 1px solid rgb(160,175,170);
 }
 
 #header #projects, #header #tags, #header #actions {
 	color: #4B6268;
-	font: 14px/55px Humnst777BTRoman, 'lucida grande',verdana,helvetica,arial,sans-serif;
-	text-transform: uppercase;
+	font-family: 'OpenSansLight', 'lucida grande',verdana,helvetica,arial,sans-serif;
+	font-size: 12px;
 	font-weight: normal;
+	line-height: 40px;
+	font-style: normal;
 	float: right;
 	margin: 0px;
 
@@ -73,6 +85,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6482aa', end
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#858585', endColorstr='#6c6c6c', GradientType=0);
 	height: 60px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .button {

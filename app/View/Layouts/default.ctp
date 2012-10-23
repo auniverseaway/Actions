@@ -40,11 +40,6 @@ $cakeDescription = __d('cake_dev', 'Actions');
 	?>
 </head>
 <body>
-	<!-- <div style="background-color: rgb(51,153,51); height: 110%; width: 100%; top: 0px; left: 0px; position: absolute; color: rgb(255, 255, 255); ">
-        <div style="width:320px;height:320px;margin-top:0px">
-                <img src="http://izumit.com/actions/images/Actions-Icon.png" height="100%" width="100%"/>
-        </div>
-    </div> -->
 	<div id="container">
 		<div id="header">
 			<h1 id="tags"><?php echo $this->Html->link('Tags', '/Tags'); ?></h1>

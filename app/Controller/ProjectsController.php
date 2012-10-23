@@ -23,7 +23,7 @@ class ProjectsController extends AppController {
         $this->Project->id = $id;
         if ($this->request->is('get')) {
             $this->request->data = $this->Project->read();
-            $actions = $this->Project->Action->find('all', array('conditions' => array('project_id' => $id)));
+            $actions = $this->Project->Action->find('all', array('conditions' => array('project_id' => $id, "status" => "0")));
             $this->set(compact('actions'));
         } else {
             if ($this->Project->save($this->request->data)) {

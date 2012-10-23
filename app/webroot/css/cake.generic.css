@@ -21,18 +21,24 @@
 	padding:0;
 }
 
+html {
+    height: 100%;
+}
+
 /** General Style Info **/
 body {
-	background: #F3F3F3;
 	color: #fff;
-	font-family: Humnst777LtBTLight, 'lucida grande',verdana,helvetica,arial,sans-serif;
+	font-family: 'OpenSansLight', 'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
 	margin: 0;
+	height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background: #f4fbfd;
 }
 a {
 	color: #003d4c;
 	text-decoration: underline;
-	font-weight: bold;
 }
 a:hover {
 	color: #367889;
