@@ -1,18 +1,13 @@
 <?php
-class Action extends AppModel {
-    var $name = 'Action';
-	public $belongsTo = array(
-        'Project' => array(
-            'className'    => 'Project',
-            'dependent'    => true
-        )
-    );
+class Tag extends AppModel {
+    var $name = 'Tag';
+    
     var $hasAndBelongsToMany = array(        
-        'Tag' => array(                
-            'className'              => 'Tag',                
+        'Action' => array(                
+            'className'              => 'Action',                
             'joinTable'              => 'actions_tags',                
-            'foreignKey'             => 'action_id',                
-            'associationForeignKey'  => 'tag_id',            
+            'foreignKey'             => 'tag_id',                
+            'associationForeignKey'  => 'action_id',            
             'unique'                 => true,       
             'conditions'             => '',
             'fields'                 => '',
@@ -25,13 +20,10 @@ class Action extends AppModel {
             )    
     );
 
-
-	public $validate = array(
-        'title' => array(
+    public $validate = array(
+        'name' => array(
             'rule' => 'notEmpty'
-        ),
-        'status' => array(
-            'rule' => array('boolean'),
         )
     );
+
 }

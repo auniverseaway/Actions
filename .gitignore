@@ -1,5 +1,7 @@
 /app/Config/database.php
-/app/tmp
+/app/tmp/logs/*
+/app/tmp/cache/persistent/*
+/app/tmp/cache/models/*
 /lib/Cake/Console/Templates/skel/tmp/
 /plugins
 /vendors

@@ -6,6 +6,9 @@
 
 <p><?php echo h($action['Project']['name']); ?></p>
 
+<p><?php echo h($action['Tag']['name']); ?></p>
+
 <p><?php echo h($action['Action']['status'] ? 'Yes' : 'No'); ?></p>
 
 <p><small>Created: <?php echo $action['Action']['created']; ?></small></p>
+<?php debug($action) ?>

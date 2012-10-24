@@ -51,7 +51,11 @@ $cakeDescription = __d('cake_dev', 'Actions');
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			
+			<div id="buttons">
+				<?php echo $this->Html->link('Add Action', array('controller' => 'actions', 'action' => 'add'), array('class' => 'button')); ?>
+				<?php echo $this->Html->link('Add Project', array('controller' => 'projects', 'action' => 'add'), array('class' => 'button')); ?>
+				<?php echo $this->Html->link('Add Tag', array('controller' => 'tags', 'action' => 'add'), array('class' => 'button')); ?>
+			</div>
 		</div>
 	</div>
 </body>

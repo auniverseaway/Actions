@@ -8,8 +8,9 @@ class ActionsController extends AppController {
     }
 
     public function view($id = null) {
-        $this->Action->id = $id;
-        $this->set('action', $this->Action->read());
+    	$this->Action->contain(array('Tag'));
+    	$this->Action->id = $id;
+		$this->set('action', $this->Action->read());
     }
 
     public function add() {
@@ -31,6 +32,7 @@ class ActionsController extends AppController {
 	    if ($this->request->is('get')) {
 	        $this->request->data = $this->Action->read();
 	        $projects = $this->Action->Project->find('list');
+	        $this->set('tags', $this->Action->Tag->find('list'));
 			$this->set(compact('projects'));
 	    } else {
 	        if ($this->Action->save($this->request->data)) {
@@ -58,7 +60,7 @@ class ActionsController extends AppController {
 	        $this->Action->set('status', 1);
 			$this->Action->save();
 			$this->Session->setFlash('The Action with id ' . $title . ' has been deleted.');
-	    	$this->redirect(array('action' => 'index'));
+	    	$this->redirect(array('action' => 'inbox'));
 	    }
 	    
 	}
