@@ -3,4 +3,3 @@
         array('controller' => 'actions', 'action' => 'edit', $action['id'])); ?>
 	</div>
 <?php endforeach; ?>
-<?php debug($actions); ?>
