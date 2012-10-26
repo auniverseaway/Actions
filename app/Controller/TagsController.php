@@ -22,12 +22,10 @@ class TagsController extends AppController {
     public function edit($id = null) {
         $this->Tag->id = $id;
         if ($this->request->is('get')) {
-            $this->request->data = $this->Tag->read();
-            
+			$tag = $this->Tag->read();
+            $this->request->data = $tag;
 
-            $this->Tag->bindModel(array('hasOne' => array('ActionsTag')));
-            $actions = $this->Tag->find('all', array('fields' => array('Tag.*'), 'conditions'=>array('ActionsTag.tag_id'=>$id)));
-            $this->set(compact('actions'));
+			$this->set('actions', $tag['Action']);
         } else {
             if ($this->Tag->save($this->request->data)) {
                 $this->Session->setFlash('Your project has been updated.');

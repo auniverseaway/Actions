@@ -6,8 +6,4 @@
     echo $this->Form->input('id', array('type' => 'hidden'));
     echo $this->Form->end('Save Project');
 ?>
-<?php foreach ($actions as $action): ?>
-    <div class="action"><?php echo $this->Html->link($action['Action']['title'], 
-        array('controller' => 'actions', 'action' => 'edit', $action['Action']['id'])); ?>
-	</div>
-<?php endforeach; ?>
+<?php echo $this->element('actions-list', compact($actions)) ?>
