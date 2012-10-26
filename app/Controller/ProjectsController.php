@@ -22,9 +22,10 @@ class ProjectsController extends AppController {
     public function edit($id = null) {
         $this->Project->id = $id;
         if ($this->request->is('get')) {
-            $this->request->data = $this->Project->read();
-            $actions = $this->Project->Action->find('all', array('conditions' => array('project_id' => $id, "status" => "0")));
-            $this->set(compact('actions'));
+			$project = $this->Project->read();
+            $this->request->data = $project;
+
+            $this->set('actions', $project['Action']);
         } else {
             if ($this->Project->save($this->request->data)) {
                 $this->Session->setFlash('Your project has been updated.');
