@@ -1,12 +1,10 @@
 <?php
 class Project extends AppModel {
-    var $name = 'Project';
-    var $hasMany = array(
-        'Action' => array(
-            'className' => 'Action',
-            'foreignKey' => 'project_id',
-        )
-    );
+	var $hasMany = array(
+		'Action' => array(
+			'dependent' => true
+		)
+	);
 
     public $validate = array(
         'name' => array(
