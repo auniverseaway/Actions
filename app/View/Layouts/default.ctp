@@ -23,6 +23,7 @@ $cakeDescription = __d('cake_dev', 'Actions');
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon-144x144-precomposed.png"/>
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
@@ -51,11 +52,9 @@ $cakeDescription = __d('cake_dev', 'Actions');
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<div id="buttons">
-				<?php echo $this->Html->link('Add Action', array('controller' => 'actions', 'action' => 'add'), array('class' => 'button')); ?>
-				<?php echo $this->Html->link('Add Project', array('controller' => 'projects', 'action' => 'add'), array('class' => 'button')); ?>
-				<?php echo $this->Html->link('Add Tag', array('controller' => 'tags', 'action' => 'add'), array('class' => 'button')); ?>
-			</div>
+			<?php echo $this->Html->link('Add Action', array('controller' => 'actions', 'action' => 'add'), array('class' => 'button')); ?>
+			<?php echo $this->Html->link('Add Project', array('controller' => 'projects', 'action' => 'add'), array('class' => 'button')); ?>
+			<?php echo $this->Html->link('Add Tag', array('controller' => 'tags', 'action' => 'add'), array('class' => 'button')); ?>
 		</div>
 	</div>
 </body>
