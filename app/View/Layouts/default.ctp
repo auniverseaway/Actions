@@ -18,11 +18,13 @@
 
 $cakeDescription = __d('cake_dev', 'Actions');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
 	<link rel="apple-touch-icon" href="/img/apple-touch-icon-144x144-precomposed.png"/>
 	<title>
 		<?php echo $cakeDescription ?>:
@@ -57,5 +59,9 @@ $cakeDescription = __d('cake_dev', 'Actions');
 			<?php echo $this->Html->link('Add Tag', array('controller' => 'tags', 'action' => 'add'), array('class' => 'button')); ?>
 		</div>
 	</div>
+<?php
+		echo $this->Html->script('http://code.jquery.com/jquery.min.js');
+		echo $this->Html->script('actions.core');
+?>
 </body>
 </html>
